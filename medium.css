@@ -1,0 +1,19 @@
+.navigation .logo{
+    font-size: 1.8em;
+}
+.navigation .menu ul li{
+    padding: 0px 10px;
+    font-size: 0.9em;
+}
+.banner .konten .title{
+    font-size: 2em;
+}
+.banner .konten .subtitle{
+    font-size: 1.1em;
+}
+.services .kotak .piece{
+    width: 47%;
+}
+.blog .kotak .piece{
+    width: 47%;
+}

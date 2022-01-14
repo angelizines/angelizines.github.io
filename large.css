@@ -1,0 +1,17 @@
+html,body{
+    font-size: 16px;
+}
+
+.container{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.navigation{
+    height: 64px;
+}
+.banner{
+    margin-top: 64px;
+    height: calc(100vh - 64px);
+}

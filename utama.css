@@ -1,0 +1,246 @@
+@font-face {
+    font-family: "com_b";
+    src: url("./asset/font/Cormorant-Bold.otf");
+}
+@font-face {
+    font-family: "com_l";
+    src: url("./asset/font/Cormorant-Light.otf");
+}
+@font-face {
+    font-family: "com_m";
+    src: url("./asset/font/Cormorant-Medium.otf");
+}
+@font-face {
+    font-family: "com_r";
+    src: url("./asset/font/Cormorant-Regular.otf");
+}
+html,body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: "com_r";
+}
+.cb{
+    clear: both;
+}
+*{
+    box-sizing: border-box;
+}
+.container{
+    /* SEOLAH2 MEMBERIKAN PADDING KIRI KANAN */
+    width: 1170px;
+    /* border: 5px solid red; */
+    /* ketengahin... */
+    margin: 0 auto;
+}
+/* NAVIGATION */
+.navigation{
+    height: 72px;
+    /* POSITION FIXED NOT WORKING WITH TRANSFORM */
+    position: fixed;
+    /* nempel diatas.. JANGAN LUPA TEMPATKAN POSITIONNYA */
+    top: 0;
+    background-color: white;
+    width: 100%;
+    /* Kasih z-index kalau mau maju duluan */
+    z-index: 1;
+}
+.navigation .logo{
+    float: left;
+    font-family: "com_b";
+    font-size: 2em;
+    margin-top: 12px;
+}
+.navigation .menu{
+    float: right;
+}
+.navigation .menu ul li{
+    display: inline-block;
+    padding: 0 20px;
+    line-height: 2;
+}
+.navigation .mini-menu{
+    float: right;
+    margin-top: 20px;
+    /* HILANGIN DULU KARENA MUNCUL BELAKANGAN */
+    display: none;
+}
+
+/* BANNER */
+.banner{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("./asset/img/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* kalau hanya 100vh nanti dia bisa ke scroll karena ada margin-top 72 px */
+    height:calc(100vh - 72px);
+    color: white;
+    text-align: center;
+    margin-top: 72px;
+    position: relative;
+}
+.banner .konten{
+    position: absolute;
+    /* POSITION ABSOLUTE TERGANTUNG PARENT YANG RELATIVE */
+    top: 50%;
+    left: 50%;
+    /* transform artinya dari posisi dia sekarang akan diberlakukan beberapa teknik */
+    /* NAIKIN 50% DARI UKURAN KONTENNYA SEHINGGA PAS DITENGAH
+    KARENA KALAU HANYA TOP 50% MAKA KONTEN YANG PALING ATAS YANG BERADA DI AWALAN POSISI TENGAH SEHINGGA
+    TERBENAM KEBAWAH DAN PERLU DINAIKKAN 50% DARI UKURAN KONTENNYA
+     */
+    /* transform: translateY(-50%); */
+    /* translate x,y */
+    transform: translate(-50%,-50%);
+    
+}
+.banner .konten .title{
+    font-size: 3em;
+    font-family: "com_b";
+    margin-bottom: 30px;
+}
+.banner .konten .subtitle{
+    font-size: 1.3em;
+    font-family: "com_l";
+    margin-bottom: 50px;
+}
+
+button{
+    border: 0;
+    padding: 10px 40px;
+    background-color: white;
+    font-size: 1.3em;
+    font-family: "com-b";
+    cursor: pointer;
+}
+button:hover{
+    background-color: #222;
+    color: white;
+}
+.judul{
+    font-size: 2em;
+    text-align: center;
+    font-family: "com-b";
+    margin-bottom: 50px;
+}
+.detail{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.py{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* OUR SERVICE */
+.services{
+    background-color: #f8f8f8;
+}
+.services .kotak .piece{
+    background-color: white;
+    display: block;
+    width: 30%;
+    text-align: center;
+    padding: 30px;
+    float: left;
+    margin: 30px 1.5%;
+}
+
+.services .kotak .title{
+    padding-bottom: 20px;
+}
+.services .kotak .subtitle{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.8em;
+}
+/* OUR PARALAX */
+.paralax{
+    background-color: black;
+    color: white;
+}
+.paralax .piece{
+    float: left;
+    text-align: center;
+    width: 25%;
+}
+.paralax .piece .title{
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+/* BLOG */
+.blog .video iframe{
+    width: 100%;
+    height: 70vh;
+    margin-bottom: 20px;
+}
+
+.blog .kotak{
+    width: 103%;
+    transform: translateX(-1%);
+}
+.blog .kotak .piece{
+    float: left;
+    width: 31%;
+    /* kanan kiri margin 1 persen */
+    margin: 30px 1%;
+    margin-bottom: 0;
+}
+
+.blog .kotak .piece img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.blog .kotak .piece .title{
+    margin-bottom: 20px;
+}
+
+.blog .kotak .piece .subtitle{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.8em;
+    margin-bottom: 20px;
+}
+
+/* GALLERY */
+.gallery img{
+    width: 50%;
+    float: left;
+}
+
+/* CONTACT */
+.contact .kiri{
+    float: left;
+    width: 40%;
+}
+
+.contact .kiri img{
+    width: 100%;
+}
+.contact .kanan{
+    float: left;
+    width: 50%;
+    padding: 20px 5%;
+}
+.contact button{
+    border: 1px solid grey;
+}
+.contact input[type="text"]{
+    /* SET WIDTH NYA KE 100% */
+    width: 100%;
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #BBB;
+}
+.footer{
+    text-align: center;
+    padding: 20px 0px;
+    background-color: #333;
+}
+.footer a{
+    /* Hilangin garis biru nya , set text decoration to none */
+    text-decoration: none;
+    font-size: 1.3em;
+    color: white;
+}

@@ -1,0 +1,13 @@
+.banner button{
+    padding: 5px 10px;
+}
+.services .kotak .piece{
+    width: 100%;
+}
+.paralax .piece{
+    width: 100%;
+    padding: 5px 0;
+}
+.blog .kotak .piece{
+    width: 97%;
+}
